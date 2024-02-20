@@ -13,3 +13,14 @@ let string = "surya";
 let age = "23"
 let isMarried = false;
 console.log("Name of the person is" + string + "age is:" + age + "married" + isMarried);
+
+let answer = 0;
+for(let i=0 ; i<=100 ; i = i + 1){
+    answer = answer + i;
+}
+console.log(answer)
+
+const personArray = ["Surya1" , "Surya2"];
+personArray.forEach(surya =>{
+    console.log(surya);
+});
