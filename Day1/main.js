@@ -24,3 +24,14 @@ const personArray = ["Surya1" , "Surya2"];
 personArray.forEach(surya =>{
     console.log(surya);
 });
+
+
+//array of objects
+
+let arrayOfObjects = [{name:"surya" , gender:"male"} , {name:"suryas future wife" , gender: "female"}];
+
+arrayOfObjects.forEach(arr=> {
+    if(arr.gender == "female"){
+        console.log(arr.name);
+    }
+});
