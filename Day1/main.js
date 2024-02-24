@@ -1,37 +1,17 @@
-console.log("Hello");
+const accountId = 123424;
+let accountEmail = "surya@surya.com";
+var accountPass = "pass";
+accountCity = "rahama";
 
-//variables 
-let x = "x";
-x =  3;
-console.log(x);
-var v = "v"; //not used anymore
-const c = "c"; //only defined once can't be changed
-//c = 2 // fails throws error
-console.log(c)
-
-let string = "surya";
-let age = "23"
-let isMarried = false;
-console.log("Name of the person is" + string + "age is:" + age + "married" + isMarried);
-
-let answer = 0;
-for(let i=0 ; i<=100 ; i = i + 1){
-    answer = answer + i;
-}
-console.log(answer)
-
-const personArray = ["Surya1" , "Surya2"];
-personArray.forEach(surya =>{
-    console.log(surya);
-});
+// accountId = 2 // not allowed
+accountEmail = "surya1@surya.com";
+console.log(accountId);
 
 
-//array of objects
+let name ="surya"
+let age = 24 // => 2 - 2^53
+let everUsedJS = true
 
-let arrayOfObjects = [{name:"surya" , gender:"male"} , {name:"suryas future wife" , gender: "female"}];
+//symbol in JS = 
 
-arrayOfObjects.forEach(arr=> {
-    if(arr.gender == "female"){
-        console.log(arr.name);
-    }
-});
+console.log(typeof"".toUpperCase)
