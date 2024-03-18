@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrix Effect</title>
+  
+  <link rel="stylesheet" href="styles.css">
+    <style>
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.matrix-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.matrix-text {
+  color: #0F0;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+
+    </style>
 </head>
 <body>
-    <button onclick="">Sexy sumit</button>
-</body>
+  <div class="matrix-container">
+    <div class="matrix-text"></div>
+  </div>
+  <script>
+    const columns = Math.floor(window.innerWidth / 10);
+const matrixContainer = document.querySelector('.matrix-container');
 
-<script>
-    
-</script>
+for (let i = 0; i < columns; i++) {
+  const column = document.createElement('div');
+  column.className = 'matrix-column';
+  for (let j = 0; j < 40; j++) {
+    const char = document.createElement('span');
+    char.className = 'matrix-char';
+    char.textContent = Math.random() < 0.2 ? '1' : '0'; // 20% chance of showing '1'
+    column.appendChild(char);
+  }
+  matrixContainer.appendChild(column);
+}
+
+const matrixChars = document.querySelectorAll('.matrix-char');
+
+function updateMatrix() {
+  matrixChars.forEach(char => {
+    if (Math.random() < 0.05) { // 5% chance of changing character
+      char.textContent = Math.random() < 0.2 ? '1' : '0'; // 20% chance of showing '1'
+    }
+  });
+}
+
+setInterval(updateMatrix, 50);
+
+  </script>
+</body>
 </html>
